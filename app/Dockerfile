@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /usr/src/react-fastify
 
-COPY ./yarn/releases/ /usr/src/react-fastify/.yarn/releases/
+COPY .yarn/releases/ /usr/src/react-fastify/.yarn/releases/
 COPY package.json yarn.lock .yarnrc.yml tsconfig.json /usr/src/react-fastify/
 COPY app/package.json /usr/src/react-fastify/app/package.json
 
