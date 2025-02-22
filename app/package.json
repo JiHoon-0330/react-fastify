@@ -1,7 +1,27 @@
 {
   "name": "app",
-  "packageManager": "yarn@4.6.0",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "start": "node --loader=extensionless dist/index.js"
+  },
+  "nodemonConfig": {
+    "watch": "src",
+    "ignore": [
+      "dist/**"
+    ],
+    "ext": "ts",
+    "exec": "rm -rf ./dist && node esbuild.config.js && node --loader=extensionless dist/index.js"
+  },
   "devDependencies": {
+    "@types/node": "20",
+    "esbuild": "^0.25.0",
+    "extensionless": "^1.9.9",
+    "nodemon": "^3.1.9",
     "typescript": "^5.7.3"
+  },
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "fastify": "^5.2.1"
   }
 }
