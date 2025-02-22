@@ -13,5 +13,5 @@
 .pnp.*
 
 dist
-
+.env
 메모.md
