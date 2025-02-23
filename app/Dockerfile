@@ -4,7 +4,7 @@ WORKDIR /usr/src/react-fastify
 
 COPY .yarn/releases/ /usr/src/react-fastify/.yarn/releases/
 COPY package.json yarn.lock .yarnrc.yml tsconfig.json /usr/src/react-fastify/
-COPY app/package.json /usr/src/react-fastify/app/package.json
+COPY app/package.json app/react-router.config.ts app/vite.config.ts app/vitest.config.ts /usr/src/react-fastify/app/
 
 RUN yarn install --immutable
 
