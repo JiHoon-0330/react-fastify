@@ -8,9 +8,7 @@
   },
   "nodemonConfig": {
     "watch": "src",
-    "ignore": [
-      "dist/**"
-    ],
+    "ignore": ["dist/**", "frontend/**"],
     "ext": "ts",
     "exec": "rm -rf ./dist && node esbuild.config.js && react-router build && node --loader=extensionless dist/index.js | yarn pino-pretty --singleLine"
   },

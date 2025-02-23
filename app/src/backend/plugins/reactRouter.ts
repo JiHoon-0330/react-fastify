@@ -3,7 +3,9 @@ import fp from "fastify-plugin";
 
 export default fp(
   async (app) => {
-    app.register(reactRouterFastify, {});
+    await app.register(reactRouterFastify, {
+      buildDirectory: "./dist/frontend",
+    });
   },
   { name: "reactRouter", dependencies: ["app.env", "app.gracefulShutdown"] },
 );
