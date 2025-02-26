@@ -21,9 +21,6 @@ export default fp(
       getLoadContext: (req) => {
         return { app, req };
       },
-      // fastifyStaticOptions: {
-      //   root: "./dist/frontend",
-      // },
     });
   },
   { name: "reactRouter", dependencies: ["app.env", "app.gracefulShutdown"] },
